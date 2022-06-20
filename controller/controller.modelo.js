@@ -20,7 +20,7 @@ exports.getModelo = async(req, res, next)=>{
                     request:    {
                         tipo:'GET',
                         descricao:'Retorna o detalhe de um modelo especifico',
-                        url:`http://localhost:${process.env.SERVER_PORT}/modelo/${x.modelo_id}`
+                        url:`http://localhost:${3000}/modelo/${x.modelo_id}`
                     }
                 }
             })
@@ -48,7 +48,7 @@ exports.getModeloID = async(req, res, next)=>{
                     request:    {
                         tipo:'GET',
                         descricao:'Retorna todos os modelos',
-                        url:`http://localhost:${process.env.SERVER_PORT}/modelo`
+                        url:`http://localhost:${3000}/modelo`
                     }
                 }
             }     

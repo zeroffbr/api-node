@@ -6,7 +6,7 @@ const bodyParser    = require('body-parser');
 
 const app       = express()
 const jtwAuth   = require('./middleware/jwt-auth');
-// const basicAuth = require('./middleware/basic-auth');
+const basicAuth = require('./middleware/basic-auth');
 
 const Grupo   = require('./routes/grupo');
 const Usuario = require('./routes/usuario');

@@ -19,7 +19,7 @@ exports.getGrupo = async(req, res, next)=>{
                     request:    {
                         tipo:'GET',
                         descricao:'Retorna o detalhe de um grupo especifico',
-                        url:`http://localhost:${process.env.SERVER_PORT}/grupo/${x.grupo_id}`
+                        url:`http://localhost:${3000}/grupo/${x.grupo_id}`
                     }
                 }
             })
@@ -49,7 +49,7 @@ exports.getGrupoID = async(req, res, next)=>{
                 request:    {
                     tipo:'GET',
                     descricao:'Retorna todos os grupos',
-                    url:`http://localhost:${process.env.SERVER_PORT}/grupo`
+                    url:`http://localhost:${3000}/grupo`
                 }
             }
         }                

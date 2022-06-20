@@ -11,12 +11,12 @@ exports.postLogin = async(req, res, next)=>{
                 usuario_id : result.rows[0].usuario_id,
                 login: result.rows[0].login,
             },
-            process.env.JWT_KEY,{
+            "testserver",{
                 expiresIn:'1h'
             });
             return res.status(200).send({
                 mensagem:'Autenticado com sucesso',
-                token: token
+                token: 'Bearer '+token
             })
         }      
     } catch (error) {

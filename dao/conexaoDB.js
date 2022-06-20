@@ -1,11 +1,11 @@
 const { Pool } = require('pg')
 
 const pool = new Pool({
-  'database': process.env.PG_DATABASE,
-  'host':     process.env.PG_HOST,
-  'user':     process.env.PG_USER,
-  'password': process.env.PG_PASSWORD,
-  'port':     process.env.PG_PORT,
+  'database': "logica",
+  'host':     "127.0.0.7",
+  'user':     "postgres",
+  'password': "masterkey",
+  'port':     5432,
   'max': 1000,
   // 'idleTimeoutMillis': 0,
   'connectionTimeoutMillis': 0,

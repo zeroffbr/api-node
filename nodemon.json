@@ -1,0 +1,16 @@
+{
+    "env" : {
+        "SERVER_PORT":  3000,
+
+        "PG_DATABASE":  "logica",
+        "PG_HOST":      "127.0.0.7" ,  
+        "PG_USER":      "postgres",    
+        "PG_PASSWORD":  "masterkey",
+        "PG_PORT":      5432,
+
+        "JWT_KEY":      "testserver",
+
+        "BASIC_USER":   "testserver", 
+        "BASIC_PASS":   "testserver" 
+    }
+}

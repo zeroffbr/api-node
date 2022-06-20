@@ -1,0 +1,59 @@
+# Retorna todos os modelos
+GET http://localhost:3000/modelo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NzQ4MTM2LCJleHAiOjE2NTU3NTE3MzZ9.tMQIBZ1tkRj1barxQYPGGVxcWaXwo43VvukEuwSytQY
+
+###
+
+# Retorna detalhes de um modelo
+GET http://localhost:3000/modelo/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NzQ4MTM2LCJleHAiOjE2NTU3NTE3MzZ9.tMQIBZ1tkRj1barxQYPGGVxcWaXwo43VvukEuwSytQY
+
+###
+
+# Altera um modelo
+PATCH http://localhost:3000/modelo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NzQ4MTM2LCJleHAiOjE2NTU3NTE3MzZ9.tMQIBZ1tkRj1barxQYPGGVxcWaXwo43VvukEuwSytQY
+
+{
+    "cabecalho":{
+        "modelo_id":"10",
+        "codigo":"10",
+        "descricao":"teste 10", 
+        "data_ultima_alteracao":null, 
+        "modelo_uuid":null, 
+        "deletado":false, 
+        "replicado":false
+    }
+}
+###
+
+# Remove um modelo
+DELETE  http://localhost:3000/modelo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NzQ4MTM2LCJleHAiOjE2NTU3NTE3MzZ9.tMQIBZ1tkRj1barxQYPGGVxcWaXwo43VvukEuwSytQY
+
+{
+    "modelo_id":10
+}
+###
+
+# Insere um modelo
+POST http://localhost:3000/modelo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NzQ4MTM2LCJleHAiOjE2NTU3NTE3MzZ9.tMQIBZ1tkRj1barxQYPGGVxcWaXwo43VvukEuwSytQY
+
+{
+    "cabecalho":{
+        "modelo_id":"10",
+        "codigo":"10",
+        "descricao":"teste 10", 
+        "data_ultima_alteracao":null, 
+        "modelo_uuid":null, 
+        "deletado":false, 
+        "replicado":false
+    }
+}
+###

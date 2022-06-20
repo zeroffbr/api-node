@@ -1,0 +1,46 @@
+# Retorna todos os grupos
+GET http://localhost:3000/grupo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NTU5OTQ1LCJleHAiOjE2NTU1NjM1NDV9.PVplncdDJNQaDCLLxYVW8eRKbVC2RQ-6zAwnK9kRaMg
+
+###
+
+# Retorna detalhes de um grupo
+GET http://localhost:3000/grupo/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NTU5OTQ1LCJleHAiOjE2NTU1NjM1NDV9.PVplncdDJNQaDCLLxYVW8eRKbVC2RQ-6zAwnK9kRaMg
+
+###
+
+# Altera um grupo
+PATCH http://localhost:3000/grupo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NTU5OTQ1LCJleHAiOjE2NTU1NjM1NDV9.PVplncdDJNQaDCLLxYVW8eRKbVC2RQ-6zAwnK9kRaMg
+
+{
+    "grupo_id":70,
+    "descricao" : "Caneta",
+    "comissao" : 11.50
+}
+###
+
+# Remove um grupo
+DELETE  http://localhost:3000/grupo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NTU5OTQ1LCJleHAiOjE2NTU1NjM1NDV9.PVplncdDJNQaDCLLxYVW8eRKbVC2RQ-6zAwnK9kRaMg
+
+{
+    "grupo_id":71
+}
+###
+
+# Insere um grupo
+POST http://localhost:3000/grupo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoxLCJsb2dpbiI6IkFETUlOIiwiaWF0IjoxNjU1NTU5OTQ1LCJleHAiOjE2NTU1NjM1NDV9.PVplncdDJNQaDCLLxYVW8eRKbVC2RQ-6zAwnK9kRaMg
+
+{
+    "descricao" : "novo grupo",
+    "comissao" : 10.99
+}
+###

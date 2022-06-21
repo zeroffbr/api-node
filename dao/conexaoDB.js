@@ -1,8 +1,9 @@
 const { Pool } = require('pg')
+const ini = require('../class/utils')
 
 const pool = new Pool({
-  'database': "logica",
-  'host':     "127.0.0.7",
+  'database': "helpdesk",
+  'host':     "10.0.0.123",
   'user':     "postgres",
   'password': "masterkey",
   'port':     5432,

@@ -11,6 +11,7 @@ const basicAuth = require('./middleware/basic-auth');
 const Grupo   = require('./routes/grupo');
 const Usuario = require('./routes/usuario');
 const Modelo  = require('./routes/modelo');
+const Utils   = require('./routes/utils');
 
 app.use(cors())
 app.use(compression())
@@ -20,30 +21,23 @@ app.use(morgan('dev'));
 // use basic HTTP auth to secure the api
 // app.use(basicAuth);
 
-app.use((req, res, next)=>{
-    res.header('Acces-Control-Allow-Origin', '*')
-    res.header(
-        'Acces-Control-Allow-Header', 
-        'Origin, X-Requested-With, Content-Type, Accept, Authorization, Accept-Encoding'
-    );
-    if (req.method === 'OPTIONS'){
-        req.header('Acces-Control-Allow-Methods', 'DELETE, GET, PATCH, POST, PUT')
-        return res.status(200).send({});
-    }
-    next();
-});
-
-app.get('/',jtwAuth.optional, (req, res, next)=>{
-    try {
-        return res.status(200).send({status: 'API ONLINE'}) 
-    } catch (error) {
-        return res.status(500).send({error:error})    
-    }
-});
+// app.use((req, res, next)=>{
+//     res.header('Acces-Control-Allow-Origin', '*')
+//     res.header(
+//         'Acces-Control-Allow-Header', 
+//         'Origin, X-Requested-With, Content-Type, Accept, Authorization, Accept-Encoding'
+//     );
+//     if (req.method === 'OPTIONS'){
+//         req.header('Acces-Control-Allow-Methods', 'DELETE, GET, PATCH, POST, PUT')
+//         return res.status(200).send({});
+//     }
+//     next();
+// });
 
 app.use('/grupo',  jtwAuth.required, Grupo);
 app.use(jtwAuth.optional, Usuario);
 app.use('/modelo', jtwAuth.required, Modelo);
+app.use(jtwAuth.optional, Utils);
 
 app.use((req, res, next)=>{
     const erro = new Error('Não encontrado');
